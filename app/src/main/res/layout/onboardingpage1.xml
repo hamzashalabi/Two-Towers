@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="page"
+            type="eu.application.twotowers.onboardingscreen.OnboardingPage" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E9EBFB"
+        app:layout_constraintEnd_toStartOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="@+id/textView3">
+
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="46dp"
+            android:fontFamily="@font/abhaya_libre"
+            android:text="@{page.title}"
+            android:textSize="50sp"
+            app:layout_constraintBottom_toTopOf="@+id/MapOnBoardingPage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/MapOnBoardingPage"
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:layout_marginTop="120dp"
+            android:background="@drawable/map"
+            android:contentDescription="@string/map_image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/Bottom_Shape"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:background="@drawable/bottom_shape"
+            android:contentDescription="@string/bottom_shape_image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/MapText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/abhaya_libre"
+            android:text="@{page.subTitle}"
+            android:textSize="44sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/Bottom_Shape" />
+
+        <TextView
+            android:id="@+id/MapExpText"
+            android:layout_width="278dp"
+            android:layout_height="136dp"
+            android:layout_marginTop="108dp"
+            android:layout_marginBottom="112dp"
+            android:fontFamily="@font/abhaya_libre"
+            android:text="@{page.description}"
+            android:textAlignment="center"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/Bottom_Shape"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/ProgressIndicator1"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginTop="258dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/circle_dark"
+            android:contentDescription="@string/progress_indicator_dark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ProgressIndicator3"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/Bottom_Shape"
+            app:layout_constraintVertical_bias="0.357" />
+
+        <ImageView
+            android:id="@+id/ProgressIndicator2"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="258dp"
+            android:background="@drawable/circle_light"
+            android:contentDescription="@string/progress_indicator_light"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/ProgressIndicator3"
+            app:layout_constraintTop_toTopOf="@+id/Bottom_Shape"
+            app:layout_constraintVertical_bias="0.357" />
+
+        <ImageView
+            android:id="@+id/ProgressIndicator3"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginBottom="54dp"
+            android:background="@drawable/circle_light"
+            android:contentDescription="@string/progress_indicator_light"
+            app:layout_constraintBottom_toBottomOf="@+id/Bottom_Shape"
+            app:layout_constraintEnd_toEndOf="@+id/Bottom_Shape"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/MapText"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ImageView
+        android:id="@+id/post_approval_button"
+        android:layout_width="350dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/profile_buttons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/post_approval_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/baseline_arrow_back_24"
+        app:layout_constraintBottom_toBottomOf="@+id/post_approval_button"
+        app:layout_constraintStart_toStartOf="@+id/post_approval_button"
+        app:layout_constraintTop_toTopOf="@+id/post_approval_button" />
+
+    <ImageView
+        android:id="@+id/post_approval_right_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/post_approval"
+        app:layout_constraintBottom_toBottomOf="@+id/post_approval_button"
+        app:layout_constraintEnd_toEndOf="@+id/post_approval_button"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/post_approval_text"
+        app:layout_constraintTop_toTopOf="@+id/post_approval_button" />
+
+    <TextView
+        android:id="@+id/post_approval_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/abhaya_libre"
+        android:text="@string/post_approval"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/post_approval_icon"
+        app:layout_constraintStart_toEndOf="@+id/post_approval_icon"
+        app:layout_constraintTop_toTopOf="@+id/post_approval_icon" />
+
+    <View
+        android:id="@+id/divider8"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/post_approval_button" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/post_approval_recycle_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider8" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

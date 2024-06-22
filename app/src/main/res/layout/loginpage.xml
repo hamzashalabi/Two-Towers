@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <data>
+        <variable
+            name="viewModel"
+            type="eu.application.twotowers.registration.LoginViewModel" />
+   </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E9EBFB">
+
+
+    <ImageView
+        android:id="@+id/Ani_circle1"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_marginEnd="108dp"
+        android:layout_marginBottom="224dp"
+        android:background="@drawable/animated_circle"
+        android:contentDescription="@string/animated_circle"
+        app:layout_constraintBottom_toBottomOf="@+id/glass_sign"
+        app:layout_constraintEnd_toEndOf="@+id/glass_sign" />
+
+
+    <ImageView
+        android:id="@+id/Ani_circle2"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="220dp"
+        android:background="@drawable/animated_circle"
+        android:contentDescription="@string/animated_circle"
+        app:layout_constraintStart_toStartOf="@+id/glass_sign"
+        app:layout_constraintTop_toTopOf="@+id/glass_sign" />
+
+    <ImageView
+        android:id="@+id/glass_sign"
+        android:layout_width="349dp"
+        android:layout_height="280dp"
+        android:background="@drawable/glass_sign"
+        android:contentDescription="@string/glass_effect"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
+
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="301dp"
+        android:layout_height="50dp"
+        android:text="@string/login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputLayoutPassword"
+        app:layout_constraintVertical_bias="0.01" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayoutEmail"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="301dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/e_mail"
+        app:endIconMode="clear_text"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:startIconDrawable="@drawable/email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextTextEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@={viewModel.email}" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayoutPassword"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="301dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/password"
+        android:singleLine="true"
+        app:endIconMode="password_toggle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputLayoutEmail"
+        app:startIconDrawable="@drawable/password">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextTextPassword"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@={viewModel.password}" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_light"
+        android:text="@string/login"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/glass_sign"
+        app:layout_constraintEnd_toEndOf="@+id/glass_sign"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="@+id/glass_sign"
+        app:layout_constraintTop_toTopOf="@+id/glass_sign"
+        app:layout_constraintVertical_bias="0.055" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/no_account"
+        app:layout_constraintBottom_toBottomOf="@+id/glass_sign"
+        app:layout_constraintEnd_toEndOf="@+id/glass_sign"
+        app:layout_constraintHorizontal_bias="0.384"
+        app:layout_constraintStart_toStartOf="@+id/glass_sign"
+        app:layout_constraintTop_toBottomOf="@+id/buttonLogin"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/sign_up"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/glass_sign"
+        app:layout_constraintEnd_toEndOf="@+id/glass_sign"
+        app:layout_constraintHorizontal_bias="0.613"
+        app:layout_constraintStart_toStartOf="@+id/glass_sign"
+        app:layout_constraintTop_toBottomOf="@+id/buttonLogin"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </layout>

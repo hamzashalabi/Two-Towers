@@ -1,0 +1,6 @@
+<resources>
+    <style name="Base.Theme.TwoTowers" parent="Theme.Material3.DayNight.NoActionBar">
+    </style>
+
+    <style name="Theme.TwoTowers" parent="Base.Theme.TwoTowers" />
+</resources>

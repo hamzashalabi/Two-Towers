@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ImageView
+        android:id="@+id/saved_posts_button"
+        android:layout_width="350dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/profile_buttons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/saved_posts_icon"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/baseline_arrow_back_24"
+        app:layout_constraintBottom_toBottomOf="@+id/saved_posts_button"
+        app:layout_constraintStart_toStartOf="@+id/saved_posts_button"
+        app:layout_constraintTop_toTopOf="@+id/saved_posts_button" />
+
+    <ImageView
+        android:id="@+id/saved_posts_right_icon"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/saved_posts"
+        app:layout_constraintBottom_toBottomOf="@+id/saved_posts_button"
+        app:layout_constraintEnd_toEndOf="@+id/saved_posts_button"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/saved_posts_text_view"
+        app:layout_constraintTop_toTopOf="@+id/saved_posts_button" />
+
+    <TextView
+        android:id="@+id/saved_posts_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/abhaya_libre"
+        android:text="@string/saved_posts"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/saved_posts_icon"
+        app:layout_constraintStart_toEndOf="@+id/saved_posts_icon"
+        app:layout_constraintTop_toTopOf="@+id/saved_posts_icon" />
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/saved_posts_button" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/saved_posts_recycle_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

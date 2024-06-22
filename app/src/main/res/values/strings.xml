@@ -1,0 +1,126 @@
+<resources>
+    <string name="app_name">Two Towers</string>
+    <string name="app_Name">Two Towers</string>
+    <string name="map">Map</string>
+    <string name="MapExp">Explore the houses near you with a simple tap.</string>
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <string name="explore">Explore</string>
+    <string name="ExploreExp">Find houses with the details you wish for.</string>
+    <string name="ChatExp">Connect easily with other users on this app.</string>
+    <string name="chat">Chat</string>
+    <string name="map_image">Map Image</string>
+    <string name="bottom_shape_image">Bottom Shape Image</string>
+    <string name="progress_indicator_dark">Progress Indicator Dark</string>
+    <string name="progress_indicator_light">Progress Indicator light</string>
+    <string name="sign_in">Sign in</string>
+    <string name="glass_effect">glass effect</string>
+    <string name="animated_circle">Animated Circle</string>
+    <string name="e_mail">E-Mail</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="no_account">No Account?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="user_name">User Name</string>
+    <string name="error_state">error_state</string>
+    <string name="profile">Profile</string>
+    <string name="search">Search</string>
+    <string name="API_KEY">AIzaSyChMS6Isml91WYkUV-H9VrHERIPyjiT6P4</string>
+    <string name="enter_the_house_info_that_you_want_to_sell">Enter The Property Info</string>
+    <string name="add_photos">Add Photos</string>
+    <string name="publish">Publish</string>
+    <string name="amman">Amman</string>
+    <string name="rent">Rent</string>
+    <string name="city">City</string>
+    <string name="number_of_rooms">Number Of Rooms</string>
+    <string name="number_of_bathrooms">Number Of Bathrooms</string>
+    <string name="property">Property</string>
+    <string name="_1">1</string>
+    <string name="description">Description</string>
+    <string name="area">Area</string>
+    <string name="price">Price</string>
+    <string name="current_location">Current Location</string>
+    <string name="add_location">Add Location</string>
+    <string name="lorem">Figma ipsum component variant main layer. Community distribute slice plugin rotate hand hand. Share library polygon.</string>
+    <string name="rooms">Rooms</string>
+    <string name="bathrooms">Bathrooms</string>
+    <string name="cancel">Cancel</string>
+    <string name="confirm">Confirm</string>
+    <string name="select_a_city">Select a City</string>
+    <string name="choose_a_price_range">Choose a Price Range</string>
+    <string name="choose_an_area_range">Choose an area range</string>
+    <string name="remove_filter">Remove Filter</string>
+    <string name="send">Send</string>
+    <string name="enter_a_message">Enter a Message</string>
+    <string name="welcome">Welcome,</string>
+    <string name="post_approval">Post Approval</string>
+    <string name="send_feedback">Send Feedback</string>
+    <string name="saved_posts">Saved Posts</string>
+    <string name="my_posts">My Posts</string>
+    <string name="admin_feedback">Admin Feedback</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="change_name">Change Name</string>
+    <string name="change_email">Change Email</string>
+    <string name="change_password">Change Password</string>
+    <string name="logout">Logout</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="new_password">New Password</string>
+    <string name="old_password">Old Password</string>
+    <string name="ok">Ok</string>
+    <string name="admin">Admin</string>
+    <string name="enter_a_feedback">Enter A Feedback</string>
+    <string name="already_have_an_account">Already Have An Account?</string>
+    <string name="accept">Accept</string>
+    <string name="reject">Reject</string>
+    <string name="warning">Warning</string>
+
+    <string-array name="governorate">
+            <item>Amman</item>
+            <item>Al-Zarqa</item>
+            <item>Irbid</item>
+            <item>Al-Aqaba</item>
+            <item>Ma’an</item>
+            <item>Madaba</item>
+            <item>Al-Karak</item>
+            <item>Al-Mafarq</item>
+            <item>Al-Tafilah</item>
+            <item>Jarash</item>
+            <item>Ajloun</item>
+            <item>Al-Balqa’</item>
+        </string-array>
+
+    <string-array name="Property_Options">
+        <item>Sale</item>
+        <item>Rent</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="Rooms">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>More</item>
+    </string-array>
+
+    <string-array name="Bathrooms">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>More</item>
+    </string-array>
+
+
+    <string-array name="Property_Options_Cat">
+        <item>Sale</item>
+        <item>Rent</item>
+    </string-array>
+
+    <string-array name="Rooms_Cat">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+</resources>

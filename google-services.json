@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "901845634361",
+    "project_id": "two-towers-1f328",
+    "storage_bucket": "two-towers-1f328.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:901845634361:android:f2479f296660eed597ace8",
+        "android_client_info": {
+          "package_name": "eu.application.twotowers"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChMS6Isml91WYkUV-H9VrHERIPyjiT6P4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+
+    <uses-permission android:name="android.permission.READ_MEDIA_VISUAL_USER_SELECTED" />
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TwoTowers"
+        tools:targetApi="33"
+        android:enableOnBackInvokedCallback="true">
+
+    <meta-data
+        android:name="com.google.android.geo.API_KEY"
+        android:value= "AIzaSyChMS6Isml91WYkUV-H9VrHERIPyjiT6P4" />
+
+
+        <activity
+            android:name=".splashscreen.SplashScreen"
+            android:exported="true">
+        </activity>
+
+        <activity android:name=".onboardingscreen.OnboardingActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".registration.LoginActivity"
+            android:exported="true"/>
+
+        <activity android:name=".registration.RegistrationActivity"
+            android:exported="true"/>
+
+        <activity android:name=".map.MapActivity"
+            android:exported="true"/>
+
+        <activity android:name=".create.CreatePostActivity"
+            android:exported="true"/>
+
+        <activity android:name=".explore.ExploreActivity"
+            android:exported="true"/>
+
+        <activity android:name=".chat.ChatActivity"
+            android:exported="true">
+        </activity>
+
+        <activity android:name=".chat.AddChatActivity"
+            android:exported="true">
+        </activity>
+
+        <activity android:name=".chat.ChatListActivity"
+            android:exported="true"/>
+
+        <activity android:name=".profile.userprofile.ProfileActivity"
+            android:exported="true"/>
+
+        <activity android:name=".profile.posts.MyPostActivity"
+            android:exported="true"/>
+
+        <activity android:name=".profile.posts.SavedPostsActivity"
+            android:exported="true"/>
+
+        <activity android:name=".profile.account.AccountActivity"
+            android:exported="true"/>
+
+        <activity android:name=".profile.feedback.SendFeedbackActivity"
+            android:exported="true"/>
+
+        <activity android:name=".profile.feedback.ReceiveFeedbackActivity"
+            android:exported="true"/>
+
+        <activity android:name=".profile.postapproval.PostApprovalActivity"
+            android:exported="true"/>
+
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

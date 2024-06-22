@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="eu.application.twotowers.map.MapViewModel" />
+        </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/mapView"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:context=".map.MapActivity" />
+
+        <ImageView
+        android:id="@+id/Nav_Par"
+        android:layout_width="350dp"
+        android:layout_height="76dp"
+        android:background="@drawable/navigation_par"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.977" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="300dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="42dp"
+            android:layout_marginEnd="42dp"
+            app:cardBackgroundColor="#CBD0FE"
+            app:cardCornerRadius="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/mapView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.714"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/mapView"
+            app:layout_constraintVertical_bias="0.021">
+
+            <fragment
+                android:id="@+id/autocomplete_fragment"
+                android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+        android:id="@+id/Map_After"
+        android:layout_width="64dp"
+        android:layout_height="48dp"
+        android:background="@drawable/map_after"
+        app:layout_constraintBottom_toBottomOf="@+id/Nav_Par"
+        app:layout_constraintStart_toStartOf="@+id/Nav_Par"
+        app:layout_constraintTop_toTopOf="@+id/Nav_Par" />
+
+
+    <ImageView
+        android:id="@+id/Explore_Before"
+        android:layout_width="64dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="6dp"
+        android:background="@drawable/explore_bf"
+        app:layout_constraintBottom_toBottomOf="@+id/Nav_Par"
+        app:layout_constraintStart_toEndOf="@+id/Map_After"
+        app:layout_constraintTop_toTopOf="@+id/Nav_Par" />
+
+    <ImageView
+        android:id="@+id/Create_Before"
+        android:layout_width="64dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="6dp"
+        android:background="@drawable/create_bf"
+        app:layout_constraintBottom_toBottomOf="@+id/Nav_Par"
+        app:layout_constraintStart_toEndOf="@+id/Explore_Before"
+        app:layout_constraintTop_toTopOf="@+id/Nav_Par" />
+
+    <ImageView
+        android:id="@+id/Chat_Before"
+        android:layout_width="64dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="6dp"
+        android:background="@drawable/chat_bf"
+        app:layout_constraintBottom_toBottomOf="@+id/Nav_Par"
+        app:layout_constraintStart_toEndOf="@+id/Create_Before"
+        app:layout_constraintTop_toTopOf="@+id/Nav_Par" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/Profile_Pic"
+        android:layout_width="31dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="24dp"
+        android:background="@drawable/add_image_button"
+        app:layout_constraintBottom_toBottomOf="@+id/Nav_Par"
+        app:layout_constraintStart_toEndOf="@+id/Chat_Before"
+        app:layout_constraintTop_toTopOf="@+id/Nav_Par"
+        app:layout_constraintVertical_bias="0.311" />
+
+    <TextView
+        android:id="@+id/Profile_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/open_sans"
+        android:text="@string/profile"
+        android:textColor="@color/dark_purple"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/Nav_Par"
+        app:layout_constraintEnd_toEndOf="@+id/Nav_Par"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toEndOf="@+id/Chat_Before"
+        app:layout_constraintTop_toBottomOf="@+id/Profile_Pic"
+        app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/current_Location"
+            style="@style/Widget.Material3.Button.IconButton.Filled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="692dp"
+            android:text="@string/current_location"
+            android:visibility="invisible"
+            android:background="@drawable/btn_bg"
+            app:icon="@drawable/current_location"
+            app:iconPadding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.091"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/add_Location"
+            style="@style/Widget.Material3.Button.IconButton.Filled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="692dp"
+            android:text="@string/add_location"
+            android:visibility="invisible"
+            android:background="@drawable/btn_bg"
+            app:icon="@drawable/manual_location"
+            app:iconPadding="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/mapView"
+            app:layout_constraintHorizontal_bias="0.912"
+            app:layout_constraintStart_toStartOf="@+id/mapView"
+            app:layout_constraintTop_toTopOf="@+id/mapView" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
